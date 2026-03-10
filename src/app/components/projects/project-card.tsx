@@ -8,7 +8,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ProjectCardProps } from "@/Types/types";
-import { ChevronUp, Code, ExternalLink, Globe, Sparkles } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronUp,
+  Code,
+  ExternalLink,
+  Globe,
+  Sparkles,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { MouseEvent, useRef, useState } from "react";
@@ -16,6 +23,7 @@ import { MouseEvent, useRef, useState } from "react";
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const firstImage = project.images?.[0];
   const [showAllTags, setShowAllTags] = useState(false);
+  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -119,10 +127,35 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </CardHeader>
 
           <CardContent className="px-4 sm:px-6">
-            <p className="text-slate-400 line-clamp-2 text-sm mb-6 leading-relaxed font-medium italic">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsDescriptionOpen((prev) => !prev);
+              }}
+              className="w-full text-left group/desc"
+            >
+              <p
+                className={`text-slate-400 text-sm mb-2 leading-relaxed font-medium italic transition-all ${
+                  isDescriptionOpen ? "line-clamp-none" : "line-clamp-2"
+                }`}
+              >
+                {project.description}
+              </p>
+              <span className="inline-flex items-center gap-1 text-cyan-500/90 hover:text-cyan-400 text-xs font-bold uppercase tracking-widest">
+                {isDescriptionOpen ? (
+                  <>
+                    Show less <ChevronUp className="w-3 h-3" />
+                  </>
+                ) : (
+                  <>
+                    Read full description <ChevronDown className="w-3 h-3" />
+                  </>
+                )}
+              </span>
+            </button>
+            <div className="mb-6" />
+            <div className="flex flex-wrap gap-2 mt-4">
               {visibleTools.map((tool, index) => (
                 <span
                   key={index}

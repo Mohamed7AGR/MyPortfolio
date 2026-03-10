@@ -3,7 +3,7 @@ export const projectsData = [
     id: 1,
     name: "KEMETGO",
     description:
-      "A full-stack travel platform for booking trips and exploring destinations. Features authentication (Email/Password, Google OAuth) with role-based access (Client/Provider), user profiles with photo upload and Google Maps, trip management with gallery and availability, real-time booking with seat selection, reviews & ratings, search & discovery, and a provider dashboard for trips, bookings, and revenue.",
+      "KEMETGO is a full-stack travel and trip-booking platform. As a client, you can sign in with email or Google, explore destinations, view trip galleries and availability, pick a date and seat, and book with real-time pricing. As a trip provider, you manage your profile and branches on Google Maps, create and edit trips with images and weekly availability, handle bookings (approve or cancel), see revenue and a calendar dashboard, and respond to reviews and ratings. The app includes search, filters, and role-based access so clients and providers each get the right experience.",
     tools: [
       "Next.js",
       "TypeScript",
@@ -35,7 +35,7 @@ export const projectsData = [
     id: 2,
     name: "Barber Shop Management System",
     description:
-      "Full-stack platform for barber shop management with a user portal and admin dashboard. Users can book appointments with real-time availability, browse services and pricing, view offers and promotions, and explore the product catalog with reviews. Admins manage branches, barbers, services, bookings, offers, products, and review moderation.",
+      "A full-stack barber shop management system with two sides. For customers: browse services and prices, view offers and promotions, book appointments with real-time availability, explore the product catalog with images and reviews (1–5 stars), and switch between dark and light theme. For admins: a dashboard to manage multiple branches (addresses, working hours, gallery), barbers and services, all bookings and offers, the product catalog, and a review moderation workflow. Built to give barber shops one place to run their business and let clients book and shop online easily.",
     tools: ["Next.js", "javascript", "Tailwind CSS", "shadcn ui"],
     role: "Frontend Developer",
     code: "https://github.com/Mohamed7AGR/BABER.git",
@@ -56,7 +56,7 @@ export const projectsData = [
     id: 3,
     name: "E-Commerce",
     description:
-      "E-commerce frontend built with React and Vite. Modern single-page application with fast HMR, responsive layout, and clean UI. The project uses Tailwind CSS for styling and follows current React best practices.",
+      "A modern e-commerce frontend where users can browse product listings, view product details, add items to the cart, and go through a full checkout flow. The interface is responsive and fast, built with React and Vite for quick development and optimized production builds, and styled with Tailwind CSS. It demonstrates a complete shopping experience from discovery to purchase with a clean, maintainable codebase and deployment on Vercel.",
     tools: ["React", "Vite", "JavaScript", "Tailwind CSS", "PostCSS", "ESLint"],
     role: "Frontend Developer",
     code: "https://github.com/Mohamed7AGR/Ecommerce",
@@ -84,7 +84,7 @@ export const projectsData = [
     id: 4,
     name: "Forkify",
     description:
-      "Recipe search app built with React and Vite. Search for recipes, view ingredients and instructions, and save favorites. Modern UI with Tailwind CSS, fast HMR, and clean component structure.",
+      "Forkify is a recipe search and discovery app. You search for recipes by name, get a list of matching results, and open any recipe to see full ingredients and step-by-step instructions. You can save recipes to your favorites or bookmarks so they are easy to find later. The app is built with React and Vite for fast loading and a smooth experience, uses Tailwind for a responsive UI, and is deployed on Vercel so you can use it from any device.",
     tools: ["React", "Vite", "JavaScript", "Tailwind CSS", "PostCSS", "ESLint"],
     role: "Frontend Developer",
     code: "https://github.com/Mohamed7AGR/Forkify",
@@ -107,7 +107,7 @@ export const projectsData = [
     id: 5,
     name: "Daniels",
     description:
-      "Multi-section portfolio and landing page built with HTML and CSS. Includes hero, about with skills bars, services grid, portfolio with category filters (All, Brands, Design, Graphic), testimonials carousel, team section, and contact form. Deployed on GitHub Pages.",
+      "Daniels is a multi-section landing and portfolio page built with plain HTML, CSS, and JavaScript (no framework). It includes a hero section, an about section with animated skills progress bars, a services grid, a portfolio gallery with filter tabs (e.g. All, Brands, Design, Graphic), a testimonials carousel, a team section with member cards, and a contact form. The layout is semantic and responsive, with consistent styling across sections, and the site is deployed on GitHub Pages for static hosting.",
     tools: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
     role: "Frontend Developer",
     code: "https://github.com/Mohamed7AGR/Daniels",
@@ -130,7 +130,7 @@ export const projectsData = [
     id: 6,
     name: "Weather App",
     description:
-      "Weather application with search, current conditions display (e.g. Partly cloudy), and navigation (Home, News, Live cameras, Photos, Contacts). Built with HTML, CSS, and JavaScript and deployed on GitHub Pages.",
+      "A weather application built with HTML, CSS, and JavaScript. You enter or search for a city and the app shows the current weather: temperature, humidity, and conditions (e.g. partly cloudy, sunny). The interface includes simple navigation (Home, News, Live cameras, Photos, Contacts) and updates dynamically when you search. It fetches real weather data, displays it in a clear layout, and is deployed on GitHub Pages so it runs without a backend.",
     tools: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
     role: "Frontend Developer",
     code: "https://github.com/Mohamed7AGR/Weather-App",
@@ -153,7 +153,7 @@ export const projectsData = [
     id: 7,
     name: "Leno",
     description:
-      "Minimal agency web template (Leon) with a creative, clean layout. Includes hero (Tell Us Your Idea, We Will Do All The Work, Your Product is Worldwide), Services (Graphic Design, UI & UX, Web Design, Web Development), Portfolio section, About (Less is more work), and Contact. Built with HTML and CSS, deployed on GitHub Pages.",
+      "Leno (Leon) is a minimal, creative agency web template built with only HTML and CSS. It has a hero section with a strong headline (e.g. Tell Us Your Idea, We Will Do All The Work), a services grid covering Graphic Design, UI & UX, Web Design, and Web Development, a portfolio section to showcase work, an about section (e.g. Less is more work), and a contact area with social links. The design is clean and professional, with no JavaScript for the core layout, and the template is deployed on GitHub Pages as a static site.",
     tools: ["HTML5", "CSS3", "GitHub Pages"],
     role: "Frontend Developer",
     code: "https://github.com/Mohamed7AGR/leno",
@@ -176,7 +176,7 @@ export const projectsData = [
     id: 8,
     name: "BEFIT",
     description:
-      "Fitness web app with Calculator, Meal Plan, and Exercises sections. Built to help users track fitness goals, plan meals, and browse exercises. Deployed on Netlify.",
+      "BEFIT is a fitness and wellness web app with three main sections. The Calculator helps users work with calories and weight-related metrics. The Meal Plan section lets users plan and view daily or weekly meals for better nutrition. The Exercises section offers a browsable list of exercises to support workout planning. Together, the app helps users set goals, organize nutrition, and follow exercise routines with a simple, clear interface. It is built with React and deployed on Netlify.",
     tools: ["React", "JavaScript", "CSS", "Netlify"],
     role: "Frontend Developer",
     code: "https://github.com/Mohamed7AGR/Fitness",

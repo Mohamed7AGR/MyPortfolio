@@ -16,7 +16,7 @@ const Footer = () => (
             className="flex items-center justify-center w-fit rounded-2xl overflow-hidden bg-white/5 border border-white/10 p-2 transition-all hover:border-cyan-500/30 hover:bg-white/10"
           >
             <Image
-              src="/logo.avif"
+              src="/Logo.png"
               alt="Mohamed Hager Logo"
               width={80}
               height={80}

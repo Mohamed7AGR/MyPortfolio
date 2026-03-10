@@ -76,15 +76,17 @@ const ProjectDetails = async ({ params }: Props) => {
               <div className="flex flex-wrap gap-3">
                 <Badge
                   variant="secondary"
-                  className="bg-cyan-500/10 text-cyan-500 hover:bg-black border-cyan-500/20 px-3 py-1 font-bold tracking-wider"
+                  className="inline-flex items-center gap-2 bg-cyan-500/10 text-cyan-500 hover:bg-black border-cyan-500/20 px-3 py-1.5 font-bold tracking-wider whitespace-nowrap shrink-0"
                 >
-                  {project.date || "2024"}
+                  <Calendar className="w-4 h-4 shrink-0" />
+                  <span>{project.date || "2024"}</span>
                 </Badge>
                 <Badge
                   variant="secondary"
-                  className="bg-cyan-950/20 text-cyan-400 hover:bg-black border-cyan-900/30 px-3 py-1 font-bold tracking-wider"
+                  className="inline-flex items-center gap-2 bg-cyan-950/20 text-cyan-400 hover:bg-black border-cyan-900/30 px-3 py-1.5 font-bold tracking-wider whitespace-nowrap shrink-0"
                 >
-                  {project.role}
+                  <User className="w-4 h-4 shrink-0" />
+                  <span>{project.role}</span>
                 </Badge>
               </div>
 

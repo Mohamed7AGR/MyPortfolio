@@ -16,7 +16,7 @@ function Experience() {
       <div className="flex justify-center mb-20 lg:mb-32">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-gradient-to-r from-transparent to-cyan-600"></span>
-          <span className="bg-[#050505] border border-cyan-600/30 w-fit text-white p-3 px-4 sm:px-6 md:px-8 text-lg sm:text-xl md:text-2xl font-bold rounded-full shadow-[0_0_20px_rgba(8, 145, 178,0.2)]">
+          <span className="bg-[#050505] border text-center border-cyan-600/30 w-fit text-white p-3 px-4 sm:px-6 md:px-8 text-lg sm:text-xl md:text-2xl font-bold rounded-full shadow-[0_0_20px_rgba(8, 145, 178,0.2)]">
             Professional Journey
           </span>
           <span className="w-24 h-[2px] bg-gradient-to-l from-transparent to-cyan-600"></span>
@@ -43,9 +43,11 @@ function Experience() {
                   <div
                     className={`w-full md:w-1/2 flex ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}
                   >
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 text-slate-400 text-sm font-medium">
-                      <Calendar className="w-4 h-4 text-cyan-600" />
-                      {exp.duration}
+                    <div className="bg-white/5 backdrop-blur-sm border  border-cyan-600/20 px-4 py-2 rounded-full flex items-center gap-5 text-slate-300 text-sm font-medium whitespace-nowrap shrink-0">
+                      <div className="w-7 h-7 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0">
+                        <Calendar className="w-4 h-4 text-cyan-500 " />
+                      </div>
+                      <span>{exp.duration}</span>
                     </div>
                   </div>
 

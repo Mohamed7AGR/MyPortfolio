@@ -17,7 +17,7 @@ const Projects = () => {
       <div className="flex justify-center mb-20 lg:mb-32">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-gradient-to-r from-transparent to-cyan-600"></span>
-          <span className="bg-[#050505] border border-cyan-600/30 w-fit text-white p-3 px-4 sm:px-6 md:px-8 text-lg sm:text-xl md:text-2xl font-bold rounded-full shadow-[0_0_20px_rgba(8, 145, 178,0.2)]">
+          <span className="bg-[#050505] text-center border border-cyan-600/30 w-fit text-white p-3 px-4 sm:px-6 md:px-8 text-lg sm:text-xl md:text-2xl font-bold rounded-full shadow-[0_0_20px_rgba(8, 145, 178,0.2)]">
             Projects Showcase
           </span>
           <span className="w-24 h-[2px] bg-gradient-to-l from-transparent to-cyan-600"></span>
