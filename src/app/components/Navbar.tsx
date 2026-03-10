@@ -77,7 +77,7 @@ const Navbar = () => {
     <nav
       className={`sticky bg-blue-900! top-0 z-[9999] transition-all duration-500 `}
     >
-      <div className="container flex items-center justify-between mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full min-w-0">
+      <div className="container flex items-center justify-between mx-auto px-4 lg:px-8">
         <Link
           href="/"
           className="flex items-center justify-center rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 hover:scale-105 hover:border-cyan-500/40 hover:bg-white/10 hover:shadow-cyan-500/10"

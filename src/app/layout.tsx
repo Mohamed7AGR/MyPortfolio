@@ -81,10 +81,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden ">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <Navbar />
-        <main className="text-white w-full max-w-full min-w-0 pt-20 md:pt-24 overflow-x-hidden">
+        <main className="text-white w-full min-w-0 pt-20 md:pt-24">
           {children}
         </main>
         <ScrollToTopButton />

@@ -8,22 +8,22 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => (
   <footer className="bg-[#050505] border-t border-white/5 text-gray-200">
-    <div className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8 w-full min-w-0">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-24">
+    <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
         <div className="flex flex-col gap-6">
           <Link
             href="/"
             className="flex items-center justify-center w-fit rounded-2xl overflow-hidden bg-white/5 border border-white/10 p-2 transition-all hover:border-cyan-500/30 hover:bg-white/10"
           >
             <Image
-              src="/Logo.png"
+              src="/logo.avif"
               alt="Mohamed Hager Logo"
               width={80}
               height={80}
               className="object-contain brightness-125"
             />
           </Link>
-          <p className="text-gray-400 text-sm leading-relaxed max-w-xs break-words">
+          <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
             Frontend Developer with one year of experience, dedicated to
             crafting immersive, high-performance digital experiences with
             cutting-edge technology.
@@ -113,8 +113,8 @@ const Footer = () => (
       </div>
 
       {/* Divider & Copyright */}
-      <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-xs sm:text-sm text-center md:text-left">
-        <p className="break-words max-w-full">
+      <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+        <p>
           &copy; {new Date().getFullYear()} {personalData.name}. All rights
           reserved.
         </p>

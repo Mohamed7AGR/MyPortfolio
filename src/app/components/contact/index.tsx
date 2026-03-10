@@ -41,7 +41,7 @@ const ContactInfoCard = ({
       <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">
         {label}
       </span>
-      <span className="text-sm md:text-base text-slate-200 font-medium group-hover:text-white transition-colors break-all">
+      <span className="text-sm md:text-base text-slate-200 font-medium group-hover:text-white transition-colors">
         {value}
       </span>
     </div>
@@ -56,14 +56,11 @@ const ContactInfoCard = ({
 
 function ContactSection() {
   return (
-    <div
-      id="contact"
-      className="relative z-50 py-16 sm:py-24 lg:py-48 overflow-hidden w-full min-w-0"
-    >
+    <div id="contact" className="relative z-50 py-24 lg:py-48 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-cyan-500/10 blur-[150px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full min-w-0">
+      <div className="container mx-auto px-4 lg:px-8">
         <SectionReveal direction="up">
           <div className="flex flex-col items-center gap-6 mb-20">
             <div className="flex items-center gap-3 text-cyan-500">

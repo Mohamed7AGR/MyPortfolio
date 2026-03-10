@@ -36,8 +36,8 @@ const ProjectDetails = async ({ params }: Props) => {
   }
 
   return (
-    <div className="min-h-screen text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 w-full min-w-0 overflow-x-hidden">
-      <div className="container mx-auto max-w-7xl w-full  min-w-0">
+    <div className="min-h-screen text-white py-12 px-4 sm:px-6 lg:px-8 w-full min-w-0 overflow-x-hidden">
+      <div className="container mx-auto max-w-7xl w-full min-w-0">
         {/* Back Button */}
         <Link
           href="/#projects"
@@ -59,7 +59,7 @@ const ProjectDetails = async ({ params }: Props) => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
           </div>
 
-          <div className="relative z-10 p-5 sm:p-8 lg:p-16 flex flex-col lg:flex-row gap-8 sm:gap-12 items-center">
+          <div className="relative z-10 p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
             {/* Project Banner Image */}
             <div className="w-full lg:w-1/2 aspect-video relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
               <Image
@@ -88,7 +88,7 @@ const ProjectDetails = async ({ params }: Props) => {
                 </Badge>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-100 to-slate-400 break-words">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-100 to-slate-400">
                 {project.name}
               </h1>
 

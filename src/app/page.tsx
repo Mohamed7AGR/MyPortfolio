@@ -10,7 +10,7 @@ import "./css/card.css";
 export default function Home() {
   return (
     <>
-      <div className="container w-full max-w-full min-w-0 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+      <div className="container w-full max-w-[100vw] min-w-0 px-4 sm:px-6 lg:px-8">
         <HeroSection />
 
         <SectionReveal>

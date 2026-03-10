@@ -107,14 +107,14 @@ const HeroSection = () => {
       <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-600/10 blur-[120px] rounded-full animate-pulse" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-900/10 blur-[150px] rounded-full animate-pulse delay-700" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center px-4 sm:px-6 md:px-8 relative z-10 w-full max-w-7xl mx-auto min-w-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-4 md:px-8 relative z-10 w-full max-w-7xl mx-auto">
         {/* Left Side: Content */}
         <div className="order-2 lg:order-1 flex flex-col items-start gap-8">
           <div className="flex flex-col gap-4">
-            <span className="hero-tag px-3 sm:px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-500 text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] w-fit max-w-full">
+            <span className="hero-tag px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-500 text-xs font-bold tracking-[0.3em] w-fit">
               WELCOME TO MY UNIVERSE
             </span>
-            <h1 className="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.15] break-words">
+            <h1 className="hero-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1]">
               Building{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-cyan-800">
                 Interfaces
@@ -124,7 +124,7 @@ const HeroSection = () => {
                 Users Love
               </span>
             </h1>
-            <p className="hero-heading text-base sm:text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
+            <p className="hero-heading text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
               I'm{" "}
               <span className="text-white font-bold">{personalData.name}</span>,
               a professional
@@ -158,22 +158,21 @@ const HeroSection = () => {
               </Link>
             </div>
 
-            <div className="hero-cta flex flex-wrap gap-3 sm:gap-4">
+            <div className="hero-cta flex flex-wrap gap-4">
               <Link
                 href="/#contact"
-                className="group relative px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-cyan-600 to-cyan-900 text-white font-bold uppercase tracking-wider overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(6, 182, 212,0.3)] text-sm sm:text-base"
+                className="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-600 to-cyan-900 text-white font-bold uppercase tracking-wider overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(6, 182, 212,0.3)]"
               >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                 <span className="relative flex items-center gap-2">
-                  Let's Collaborate{" "}
-                  <RiContactsFill className="w-4 h-4 sm:w-5 sm:h-5" />
+                  Let's Collaborate <RiContactsFill />
                 </span>
               </Link>
 
               <Link
                 href={personalData.resume}
                 target="_blank"
-                className="group px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-cyan-500/50 flex items-center gap-2 text-sm sm:text-base"
+                className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-cyan-500/50 flex items-center gap-2"
               >
                 Get Resume{" "}
                 <MdDownload className="group-hover:translate-y-1 transition-transform" />

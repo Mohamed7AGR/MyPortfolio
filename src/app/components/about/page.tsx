@@ -49,15 +49,12 @@ function About() {
   }, []);
 
   return (
-    <div
-      id="about"
-      className="relative py-16 sm:py-24 lg:py-48 overflow-hidden w-full min-w-0"
-    >
+    <div id="about" className="relative py-24 lg:py-48 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-cyan-900/10 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-full min-w-0">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
           {/* Left Side: Content */}
           <div className="lg:col-span-7 flex flex-col gap-8 order-2 lg:order-1">
@@ -78,7 +75,7 @@ function About() {
               </h2>
             </div>
 
-            <div className="relative group p-5 sm:p-6 md:p-8 lg:p-10 rounded-2xl sm:rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-3xl overflow-hidden shadow-2xl">
+            <div className="relative group p-8 lg:p-10 rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-3xl overflow-hidden shadow-2xl">
               <div className="about-description text-slate-300 text-lg  lg:text-xl leading-relaxed text-justify space-y-4 font-medium italic">
                 {personalData.description}
               </div>
@@ -89,28 +86,22 @@ function About() {
 
             <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 items-center mt-4">
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl font-black text-white">
-                  1
-                </span>
-                <span className="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest font-bold">
+                <span className="text-3xl font-black text-white">1</span>
+                <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
                   Year Experience
                 </span>
               </div>
-              <div className="hidden sm:block w-[1px] h-10 bg-white/10 shrink-0" />
+              <div className="w-[1px] h-10 bg-white/10" />
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl font-black text-white">
-                  20+
-                </span>
-                <span className="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest font-bold">
+                <span className="text-3xl font-black text-white">20+</span>
+                <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
                   Global Projects
                 </span>
               </div>
-              <div className="hidden sm:block w-[1px] h-10 bg-white/10 shrink-0" />
+              <div className="w-[1px] h-10 bg-white/10" />
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl font-black text-white">
-                  10+
-                </span>
-                <span className="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest font-bold">
+                <span className="text-3xl font-black text-white">10+</span>
+                <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
                   Tech Mastered
                 </span>
               </div>

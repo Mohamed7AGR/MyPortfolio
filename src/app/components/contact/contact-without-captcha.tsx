@@ -46,7 +46,7 @@ const ContactWithoutCaptcha = () => {
   };
 
   return (
-    <div className="relative group p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl sm:rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-3xl shadow-2xl w-full min-w-0">
+    <div className="relative group p-8 lg:p-10 rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-3xl shadow-2xl">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <h3 className="text-2xl font-bold text-white tracking-tight">
