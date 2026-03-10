@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 import { BiLogoLinkedin } from "react-icons/bi";
-import { FaFacebook, FaStackOverflow } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import { personalData } from "@/../utils/Data/PersonalData";
@@ -43,7 +41,7 @@ const ContactInfoCard = ({
       <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">
         {label}
       </span>
-      <span className="text-sm md:text-base text-slate-200 font-medium group-hover:text-white transition-colors">
+      <span className="text-sm md:text-base text-slate-200 font-medium group-hover:text-white transition-colors break-all">
         {value}
       </span>
     </div>
@@ -58,16 +56,19 @@ const ContactInfoCard = ({
 
 function ContactSection() {
   return (
-    <div id="contact" className="relative z-50 py-24 lg:py-48 overflow-hidden">
+    <div
+      id="contact"
+      className="relative z-50 py-16 sm:py-24 lg:py-48 overflow-hidden w-full min-w-0"
+    >
       {/* Background Decorative Elements */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-red-500/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-cyan-500/10 blur-[150px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full min-w-0">
         <SectionReveal direction="up">
           <div className="flex flex-col items-center gap-6 mb-20">
-            <div className="flex items-center gap-3 text-red-500">
-              <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center">
-                <MessageSquare className="w-5 h-5 shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
+            <div className="flex items-center gap-3 text-cyan-500">
+              <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center">
+                <MessageSquare className="w-5 h-5 shadow-[0_0_10px_rgba(6, 182, 212,0.5)]" />
               </div>
               <span className="text-sm font-bold uppercase tracking-[0.3em]">
                 Communication
@@ -75,7 +76,7 @@ function ContactSection() {
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight text-center">
               Let's{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-cyan-800">
                 Connect
               </span>
             </h2>
@@ -99,7 +100,7 @@ function ContactSection() {
             <SectionReveal direction="left">
               <div className="flex flex-col gap-6">
                 <h3 className="text-xl font-bold text-white flex items-center gap-3">
-                  <Send className="w-5 h-5 text-red-600" />
+                  <Send className="w-5 h-5 text-cyan-600" />
                   Direct Contact
                 </h3>
                 <div className="flex flex-col gap-4">
@@ -108,14 +109,14 @@ function ContactSection() {
                     icon={MdAlternateEmail}
                     label="Email"
                     value={personalData.email}
-                    color="#ef4444"
+                    color="#06b6d4"
                   />
                   <ContactInfoCard
                     href={`tel:${personalData.phone}`}
                     icon={IoMdCall}
                     label="Phone"
                     value={personalData.phone}
-                    color="#dc2626"
+                    color="#0891b2"
                   />
                   <ContactInfoCard
                     href="#"
@@ -144,21 +145,6 @@ function ContactSection() {
                       href: personalData.linkedIn,
                       icon: BiLogoLinkedin,
                       color: "#0077b5",
-                    },
-                    {
-                      href: personalData.twitter,
-                      icon: FaXTwitter,
-                      color: "#1da1f2",
-                    },
-                    {
-                      href: personalData.stackOverflow,
-                      icon: FaStackOverflow,
-                      color: "#f48024",
-                    },
-                    {
-                      href: personalData.facebook,
-                      icon: FaFacebook,
-                      color: "#1877f2",
                     },
                   ].map((social, idx) => (
                     <Link

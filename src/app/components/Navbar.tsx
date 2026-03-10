@@ -1,5 +1,4 @@
 "use client";
-import img from "@/../public/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -47,13 +46,13 @@ const Navbar = () => {
           smooth={true}
           offset={-80}
           duration={500}
-          activeClass="text-red-500 !font-bold"
+          activeClass="text-cyan-500 !font-bold"
           className={`${baseClasses} text-slate-300 hover:text-white`}
           onClick={isMobile ? () => setIsMenuOpen(false) : undefined}
         >
           {item.label}
           {!isMobile && (
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-900 transition-all duration-300 group-hover:w-full [.text-red-500_&]:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-cyan-900 transition-all duration-300 group-hover:w-full [.text-cyan-500_&]:w-full" />
           )}
         </ScrollLink>
       );
@@ -68,7 +67,7 @@ const Navbar = () => {
       >
         {item.label}
         {!isMobile && (
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-900 transition-all duration-300 group-hover:w-full" />
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-cyan-900 transition-all duration-300 group-hover:w-full" />
         )}
       </Link>
     );
@@ -76,23 +75,19 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 z-[9999] transition-all duration-500 ${
-        isScrolled
-          ? "bg-[#050505]/80 backdrop-blur-xl border-b border-white/10 py-2"
-          : "bg-transparent py-4"
-      }`}
+      className={`sticky bg-blue-900! top-0 z-[9999] transition-all duration-500 `}
     >
-      <div className="container flex items-center justify-between mx-auto px-4 lg:px-8">
+      <div className="container flex items-center justify-between mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full min-w-0">
         <Link
           href="/"
-          className="transition-transform duration-300 hover:scale-105"
+          className="flex items-center justify-center rounded-2xl overflow-hidden bg-white/5 border border-white/10 shadow-lg shadow-black/20 transition-all duration-300 hover:scale-105 hover:border-cyan-500/40 hover:bg-white/10 hover:shadow-cyan-500/10"
         >
           <Image
-            src={img}
-            alt="Abdul Basit"
-            width={isScrolled ? 50 : 60}
-            height={isScrolled ? 50 : 60}
-            className="transition-all duration-500"
+            src="/Logo.png"
+            alt="Mohamed Hager"
+            width={isScrolled ? 40 : 48}
+            height={isScrolled ? 40 : 48}
+            className="transition-all duration-500 object-contain p-1.5"
           />
         </Link>
 

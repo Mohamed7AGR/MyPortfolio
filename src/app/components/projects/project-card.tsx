@@ -60,11 +60,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <div
         className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(239, 68, 68, 0.1), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(6, 182, 212, 0.1), transparent 40%)`,
         }}
       />
 
-      <Card className="relative flex flex-col h-full justify-between border border-white/10 bg-[#050505]/20 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:border-red-600/50 hover:shadow-red-600/10">
+      <Card className="relative flex flex-col h-full justify-between border border-white/10 bg-[#050505]/20 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:border-cyan-600/50 hover:shadow-cyan-600/10">
         <div className="flex-1">
           <div className="relative overflow-hidden aspect-video">
             {project.videos?.[0] ? (
@@ -97,7 +97,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent opacity-80" />
 
             {isNewProject(project.date) && (
-              <div className="absolute top-4 right-4 bg-gradient-to-r from-red-600 to-red-900 text-white px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg animate-pulse z-10 border border-white/10">
+              <div className="absolute top-4 right-4 bg-gradient-to-r from-cyan-600 to-cyan-900 text-white px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg animate-pulse z-10 border border-white/10">
                 <Sparkles className="w-3 h-3 text-white" />
                 <span className="text-[10px] font-bold tracking-wider">
                   NEW
@@ -106,19 +106,19 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             )}
           </div>
 
-          <CardHeader className="p-6 pb-2">
+          <CardHeader className="p-4 sm:p-6 pb-2">
             <Link
               href={`/projects/${project.id}`}
-              className="group/title inline-block"
+              className="group/title inline-block min-w-0"
             >
-              <CardTitle className="text-2xl font-bold text-white group-hover/title:text-red-500 transition-colors flex items-center gap-2 tracking-tight">
+              <CardTitle className="text-xl sm:text-2xl font-bold text-white group-hover/title:text-cyan-500 transition-colors flex items-center gap-2 tracking-tight break-words">
                 {project.name}
-                <ExternalLink className="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover/title:opacity-100 group-hover/title:translate-y-0 group-hover/title:translate-x-0 transition-all text-red-500" />
+                <ExternalLink className="w-4 h-4 shrink-0 opacity-0 -translate-y-1 translate-x-1 group-hover/title:opacity-100 group-hover/title:translate-y-0 group-hover/title:translate-x-0 transition-all text-cyan-500" />
               </CardTitle>
             </Link>
           </CardHeader>
 
-          <CardContent className="px-6">
+          <CardContent className="px-4 sm:px-6">
             <p className="text-slate-400 line-clamp-2 text-sm mb-6 leading-relaxed font-medium italic">
               {project.description}
             </p>
@@ -126,7 +126,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               {visibleTools.map((tool, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 text-[11px] font-bold bg-white/5 border border-white/10 text-slate-400 rounded-lg hover:bg-red-500/10 hover:border-red-500/30 hover:text-red-500 transition-all duration-300"
+                  className="px-3 py-1 text-[11px] font-bold bg-white/5 border border-white/10 text-slate-400 rounded-lg hover:bg-cyan-500/10 hover:border-cyan-500/30 hover:text-cyan-500 transition-all duration-300"
                 >
                   {tool}
                 </span>
@@ -137,7 +137,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     e.preventDefault();
                     setShowAllTags(!showAllTags);
                   }}
-                  className="flex items-center gap-1 text-red-500 hover:text-red-400 text-[11px] font-black transition-colors pl-1 uppercase tracking-widest"
+                  className="flex items-center gap-1 text-cyan-500 hover:text-cyan-400 text-[11px] font-black transition-colors pl-1 uppercase tracking-widest"
                 >
                   {showAllTags ? (
                     <ChevronUp className="w-3 h-3" />
@@ -150,12 +150,12 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </CardContent>
         </div>
 
-        <CardFooter className="p-6 pt-2 flex gap-4">
+        <CardFooter className="p-4 sm:p-6 pt-2 flex flex-col sm:flex-row gap-3 sm:gap-4">
           <Link href={project.demo || "#"} target="_blank" className="flex-1">
             <Button
               className={`w-full h-11 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-2 border border-white/10 ${
                 project.demo
-                  ? "bg-white/5 hover:bg-red-600 text-white hover:border-red-500 shadow-xl hover:shadow-red-600/20"
+                  ? "bg-white/5 hover:bg-cyan-600 text-white hover:border-cyan-500 shadow-xl hover:shadow-cyan-600/20"
                   : "bg-white/2 text-slate-800 cursor-not-allowed border-none"
               }`}
               disabled={!project.demo}
@@ -168,7 +168,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             <Button
               className={`w-full h-11 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-2 border border-white/10 ${
                 project.code
-                  ? "bg-white/5 hover:bg-red-950 text-white hover:border-red-800 shadow-xl hover:shadow-red-950/20"
+                  ? "bg-white/5 hover:bg-cyan-950 text-white hover:border-cyan-800 shadow-xl hover:shadow-cyan-950/20"
                   : "bg-white/2 text-slate-800 cursor-not-allowed border-none"
               }`}
               disabled={!project.code}

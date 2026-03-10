@@ -6,10 +6,8 @@ import { SplitText } from "gsap/dist/SplitText";
 import Link from "next/link";
 import { useRef } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
 import Tilt from "react-parallax-tilt";
 
 const HeroSection = () => {
@@ -106,32 +104,32 @@ const HeroSection = () => {
       className="relative min-h-[90vh] flex flex-col items-center justify-center py-12 lg:py-24 overflow-hidden"
     >
       {/* Background Ambient Glows */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-red-600/10 blur-[120px] rounded-full animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-900/10 blur-[150px] rounded-full animate-pulse delay-700" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-600/10 blur-[120px] rounded-full animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-900/10 blur-[150px] rounded-full animate-pulse delay-700" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-4 md:px-8 relative z-10 w-full max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center px-4 sm:px-6 md:px-8 relative z-10 w-full max-w-7xl mx-auto min-w-0">
         {/* Left Side: Content */}
         <div className="order-2 lg:order-1 flex flex-col items-start gap-8">
           <div className="flex flex-col gap-4">
-            <span className="hero-tag px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-bold tracking-[0.3em] w-fit">
+            <span className="hero-tag px-3 sm:px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-500 text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] w-fit max-w-full">
               WELCOME TO MY UNIVERSE
             </span>
-            <h1 className="hero-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1]">
-              Crafting{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
-                Digital
+            <h1 className="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.15] break-words">
+              Building{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-cyan-800">
+                Interfaces
               </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-800 to-red-950">
-                Masterpieces
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-800 to-cyan-950">
+                Users Love
               </span>
             </h1>
-            <p className="hero-heading text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
+            <p className="hero-heading text-base sm:text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
               I'm{" "}
               <span className="text-white font-bold">{personalData.name}</span>,
               a professional
               <span
-                className="text-red-500 ml-2 font-bold inline-block min-w-[200px]"
+                className="text-cyan-500 ml-2 font-bold inline-block min-w-0 sm:min-w-[180px] md:min-w-[200px]"
                 ref={designationRef}
               >
                 {personalData.designation}
@@ -147,48 +145,35 @@ const HeroSection = () => {
               <Link
                 href={personalData.github}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-cyan-500 hover:border-cyan-500/50 transition-all duration-300 shadow-xl"
               >
                 <BsGithub size={24} />
               </Link>
               <Link
                 href={personalData.linkedIn}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-cyan-500 hover:border-cyan-500/50 transition-all duration-300 shadow-xl"
               >
                 <BsLinkedin size={24} />
               </Link>
-              <Link
-                href={personalData.leetcode}
-                target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
-              >
-                <SiLeetcode size={24} />
-              </Link>
-              <Link
-                href={personalData.twitter}
-                target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
-              >
-                <FaTwitterSquare size={24} />
-              </Link>
             </div>
 
-            <div className="hero-cta flex flex-wrap gap-4">
+            <div className="hero-cta flex flex-wrap gap-3 sm:gap-4">
               <Link
                 href="/#contact"
-                className="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-red-600 to-red-900 text-white font-bold uppercase tracking-wider overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(239,68,68,0.3)]"
+                className="group relative px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-cyan-600 to-cyan-900 text-white font-bold uppercase tracking-wider overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(6, 182, 212,0.3)] text-sm sm:text-base"
               >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                 <span className="relative flex items-center gap-2">
-                  Let's Collaborate <RiContactsFill />
+                  Let's Collaborate{" "}
+                  <RiContactsFill className="w-4 h-4 sm:w-5 sm:h-5" />
                 </span>
               </Link>
 
               <Link
                 href={personalData.resume}
                 target="_blank"
-                className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
+                className="group px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-cyan-500/50 flex items-center gap-2 text-sm sm:text-base"
               >
                 Get Resume{" "}
                 <MdDownload className="group-hover:translate-y-1 transition-transform" />
@@ -204,7 +189,7 @@ const HeroSection = () => {
             glareEnable={true}
             glareMaxOpacity={0.1}
             scale={1.02}
-            className="w-full max-w-[550px]"
+            className="w-full max-w-full sm:max-w-[450px] lg:max-w-[550px]"
           >
             <div
               ref={codeCardRef}
@@ -213,12 +198,12 @@ const HeroSection = () => {
               {/* Card Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/5">
                 <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500" />
-                  <div className="w-3 h-3 rounded-full bg-red-400/50" />
-                  <div className="w-3 h-3 rounded-full bg-red-300/20" />
+                  <div className="w-3 h-3 rounded-full bg-cyan-500" />
+                  <div className="w-3 h-3 rounded-full bg-cyan-400/50" />
+                  <div className="w-3 h-3 rounded-full bg-cyan-300/20" />
                 </div>
                 <div className="text-xs font-mono text-slate-500 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
                   Portfolio.ts
                 </div>
               </div>
@@ -228,7 +213,7 @@ const HeroSection = () => {
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">01</span>
                     <p>
-                      <span className="text-red-500">const</span>{" "}
+                      <span className="text-cyan-500">const</span>{" "}
                       <span className="text-white">developer</span> = {"{"}
                     </p>
                   </div>
@@ -236,21 +221,21 @@ const HeroSection = () => {
                     <span className="text-slate-600 italic">02</span>
                     <p className="ml-4">
                       <span className="text-slate-200">name:</span>{" "}
-                      <span className="text-red-300">'Abdul Basit'</span>,
+                      <span className="text-cyan-300">'Mohamed Hager'</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">03</span>
                     <p className="ml-4">
                       <span className="text-slate-200">focus:</span>{" "}
-                      <span className="text-red-300">'Fullstack Mastery'</span>,
+                      <span className="text-cyan-300">'Frontend'</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">04</span>
                     <p className="ml-4">
                       <span className="text-slate-200">skills:</span> [
-                      <span className="text-red-300">
+                      <span className="text-cyan-300">
                         'NextJS', 'GSAP', 'AI'
                       </span>
                       ],
@@ -260,14 +245,16 @@ const HeroSection = () => {
                     <span className="text-slate-600 italic">05</span>
                     <p className="ml-4">
                       <span className="text-slate-200">passionate:</span>{" "}
-                      <span className="text-red-600">true</span>,
+                      <span className="text-cyan-600">true</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">06</span>
                     <p className="ml-4">
                       <span className="text-slate-200">motto:</span>{" "}
-                      <span className="text-red-400">"Build with Purpose"</span>
+                      <span className="text-cyan-400">
+                        "Build with Purpose"
+                      </span>
                     </p>
                   </div>
                   <div className="flex gap-4">
@@ -277,7 +264,7 @@ const HeroSection = () => {
                   <div className="flex gap-4 mt-4">
                     <span className="text-slate-600 italic">08</span>
                     <p>
-                      <span className="text-red-500">developer</span>.
+                      <span className="text-cyan-500">developer</span>.
                       <span className="text-white">showcase</span>();
                     </p>
                   </div>

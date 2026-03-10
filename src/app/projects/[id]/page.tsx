@@ -36,12 +36,12 @@ const ProjectDetails = async ({ params }: Props) => {
   }
 
   return (
-    <div className="min-h-screen  text-white py-12 px-4 lg:px-8">
-      <div className="container mx-auto max-w-7xl">
+    <div className="min-h-screen text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 w-full min-w-0 overflow-x-hidden">
+      <div className="container mx-auto max-w-7xl w-full max-w-full min-w-0">
         {/* Back Button */}
         <Link
           href="/#projects"
-          className="inline-flex items-center gap-2 text-white hover:text-red-500 transition-colors mb-8 group font-medium"
+          className="inline-flex items-center gap-2 text-white hover:text-cyan-500 transition-colors mb-8 group font-medium"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           <span>Back to Projects</span>
@@ -59,7 +59,7 @@ const ProjectDetails = async ({ params }: Props) => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
           </div>
 
-          <div className="relative z-10 p-8 lg:p-16 flex flex-col lg:flex-row gap-12 items-center">
+          <div className="relative z-10 p-5 sm:p-8 lg:p-16 flex flex-col lg:flex-row gap-8 sm:gap-12 items-center">
             {/* Project Banner Image */}
             <div className="w-full lg:w-1/2 aspect-video relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
               <Image
@@ -76,19 +76,19 @@ const ProjectDetails = async ({ params }: Props) => {
               <div className="flex flex-wrap gap-3">
                 <Badge
                   variant="secondary"
-                  className="bg-red-500/10 text-red-500 hover:bg-black border-red-500/20 px-3 py-1 font-bold tracking-wider"
+                  className="bg-cyan-500/10 text-cyan-500 hover:bg-black border-cyan-500/20 px-3 py-1 font-bold tracking-wider"
                 >
                   {project.date || "2024"}
                 </Badge>
                 <Badge
                   variant="secondary"
-                  className="bg-red-950/20 text-red-400 hover:bg-black border-red-900/30 px-3 py-1 font-bold tracking-wider"
+                  className="bg-cyan-950/20 text-cyan-400 hover:bg-black border-cyan-900/30 px-3 py-1 font-bold tracking-wider"
                 >
                   {project.role}
                 </Badge>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white via-red-100 to-slate-400">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-100 to-slate-400 break-words">
                 {project.name}
               </h1>
 
@@ -99,7 +99,7 @@ const ProjectDetails = async ({ params }: Props) => {
               <div className="flex flex-wrap gap-4 mt-4">
                 {project.demo && (
                   <Link href={project.demo} target="_blank">
-                    <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-red-600/20 transition-all hover:scale-105 active:scale-95 flex gap-2 font-bold uppercase tracking-widest">
+                    <Button className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-cyan-600/20 transition-all hover:scale-105 active:scale-95 flex gap-2 font-bold uppercase tracking-widest">
                       <Globe className="w-5 h-5" />
                       Live Preview
                     </Button>
@@ -109,7 +109,7 @@ const ProjectDetails = async ({ params }: Props) => {
                   <Link href={project.code} target="_blank">
                     <Button
                       variant="outline"
-                      className="border-white/10 bg-white/5 hover:bg-red-950/20 hover:text-red-500 hover:border-red-500/30 text-white px-8 py-6 text-lg rounded-xl transition-all hover:scale-105 active:scale-95 flex gap-2 font-bold uppercase tracking-widest"
+                      className="border-white/10 bg-white/5 hover:bg-cyan-950/20 hover:text-cyan-500 hover:border-cyan-500/30 text-white px-8 py-6 text-lg rounded-xl transition-all hover:scale-105 active:scale-95 flex gap-2 font-bold uppercase tracking-widest"
                     >
                       <Code className="w-5 h-5" />
                       View Source
@@ -128,8 +128,8 @@ const ProjectDetails = async ({ params }: Props) => {
             {/* Highlights */}
             <section className="flex flex-col gap-8">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20">
-                  <ShieldCheck className="w-6 h-6 text-red-500 shadow-[0_0_15px_rgba(239,68,68,0.5)]" />
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20">
+                  <ShieldCheck className="w-6 h-6 text-cyan-500 shadow-[0_0_15px_rgba(6, 182, 212,0.5)]" />
                 </div>
                 <h2 className="text-3xl font-black text-white">
                   Project Highlights
@@ -139,9 +139,9 @@ const ProjectDetails = async ({ params }: Props) => {
                 {project.highlights?.map((highlight, index) => (
                   <li
                     key={index}
-                    className="group p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-red-500/[0.03] hover:border-red-500/20 transition-all duration-300 flex gap-4"
+                    className="group p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-cyan-500/[0.03] hover:border-cyan-500/20 transition-all duration-300 flex gap-4"
                   >
-                    <div className="mt-1.5 w-2 h-2 rounded-full bg-red-600 shadow-[0_0_10px_rgba(220,38,38,0.8)] shrink-0 group-hover:scale-125 transition-transform" />
+                    <div className="mt-1.5 w-2 h-2 rounded-full bg-cyan-600 shadow-[0_0_10px_rgba(8, 145, 178,0.8)] shrink-0 group-hover:scale-125 transition-transform" />
                     <p className="text-slate-300 text-lg leading-relaxed font-medium">
                       {highlight}
                     </p>
@@ -154,8 +154,8 @@ const ProjectDetails = async ({ params }: Props) => {
             {project.images && project.images.length > 1 && (
               <section className="flex flex-col gap-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-red-900/10 flex items-center justify-center border border-red-900/20">
-                    <Calendar className="w-6 h-6 text-red-600" />
+                  <div className="w-10 h-10 rounded-xl bg-cyan-900/10 flex items-center justify-center border border-cyan-900/20">
+                    <Calendar className="w-6 h-6 text-cyan-600" />
                   </div>
                   <h2 className="text-3xl font-black text-white">
                     Visual Showcase
@@ -177,8 +177,8 @@ const ProjectDetails = async ({ params }: Props) => {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="left-4 bg-red-600/20 border-red-600/30 hover:bg-red-600 text-white transition-all backdrop-blur-md" />
-                  <CarouselNext className="right-4 bg-red-600/20 border-red-600/30 hover:bg-red-600 text-white transition-all backdrop-blur-md" />
+                  <CarouselPrevious className="left-4 bg-cyan-600/20 border-cyan-600/30 hover:bg-cyan-600 text-white transition-all backdrop-blur-md" />
+                  <CarouselNext className="right-4 bg-cyan-600/20 border-cyan-600/30 hover:bg-cyan-600 text-white transition-all backdrop-blur-md" />
                 </Carousel>
               </section>
             )}
@@ -191,8 +191,8 @@ const ProjectDetails = async ({ params }: Props) => {
               <CardContent className="p-8 flex flex-col gap-8">
                 <div className="flex flex-col gap-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center">
-                      <Cpu className="w-4 h-4 text-red-500" />
+                    <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+                      <Cpu className="w-4 h-4 text-cyan-500" />
                     </div>
                     <h3 className="text-xl font-bold text-white tracking-tight">
                       Technologies
@@ -203,7 +203,7 @@ const ProjectDetails = async ({ params }: Props) => {
                       <Badge
                         key={index}
                         variant="outline"
-                        className="px-4 py-1.5 bg-white/5 border-white/10 text-slate-300 rounded-full hover:border-red-500/50 hover:bg-red-500/10 hover:text-white transition-all cursor-default font-semibold text-[11px] uppercase tracking-wider"
+                        className="px-4 py-1.5 bg-white/5 border-white/10 text-slate-300 rounded-full hover:border-cyan-500/50 hover:bg-cyan-500/10 hover:text-white transition-all cursor-default font-semibold text-[11px] uppercase tracking-wider"
                       >
                         {tool}
                       </Badge>
@@ -211,12 +211,12 @@ const ProjectDetails = async ({ params }: Props) => {
                   </div>
                 </div>
 
-                <div className="h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent" />
+                <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
 
                 <div className="flex flex-col gap-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-red-900/10 flex items-center justify-center">
-                      <User className="w-4 h-4 text-red-600" />
+                    <div className="w-8 h-8 rounded-lg bg-cyan-900/10 flex items-center justify-center">
+                      <User className="w-4 h-4 text-cyan-600" />
                     </div>
                     <h3 className="text-xl font-bold text-white tracking-tight">
                       Project Details
@@ -242,8 +242,8 @@ const ProjectDetails = async ({ params }: Props) => {
 
                 <div className="mt-4">
                   <Link href="/#contact" className="w-full">
-                    <Button className="w-full bg-red-600/10 border border-red-600/20 hover:bg-red-600 hover:text-white py-6 rounded-xl text-red-500 font-bold uppercase tracking-widest text-xs transition-all duration-300 group flex gap-2 overflow-hidden relative">
-                      <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <Button className="w-full bg-cyan-600/10 border border-cyan-600/20 hover:bg-cyan-600 hover:text-white py-6 rounded-xl text-cyan-500 font-bold uppercase tracking-widest text-xs transition-all duration-300 group flex gap-2 overflow-hidden relative">
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-cyan-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <span className="relative z-10 flex items-center justify-center gap-2 w-full">
                         Discuss This Project
                       </span>
@@ -268,7 +268,7 @@ const ProjectDetails = async ({ params }: Props) => {
             </div>
             <Link
               href="/#projects"
-              className="text-red-500 font-black uppercase tracking-[0.2em] text-sm hover:text-red-400 transition-colors flex items-center gap-2 group"
+              className="text-cyan-500 font-black uppercase tracking-[0.2em] text-sm hover:text-cyan-400 transition-colors flex items-center gap-2 group"
             >
               View Full Archive{" "}
               <span className="group-hover:translate-x-1 transition-transform">
