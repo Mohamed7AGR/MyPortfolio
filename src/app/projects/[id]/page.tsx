@@ -37,7 +37,7 @@ const ProjectDetails = async ({ params }: Props) => {
 
   return (
     <div className="min-h-screen text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8 w-full min-w-0 overflow-x-hidden">
-      <div className="container mx-auto max-w-7xl w-full max-w-full min-w-0">
+      <div className="container mx-auto max-w-7xl w-full  min-w-0">
         {/* Back Button */}
         <Link
           href="/#projects"
