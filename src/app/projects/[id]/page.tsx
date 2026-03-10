@@ -194,6 +194,7 @@ const ProjectDetails = async ({ params }: Props) => {
                     <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                       <Cpu className="w-4 h-4 text-cyan-500" />
                     </div>
+
                     <h3 className="text-xl font-bold text-white tracking-tight">
                       Technologies
                     </h3>
